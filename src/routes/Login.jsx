@@ -1,4 +1,6 @@
 import React from "react";
+import Input from "../components/Input";
+
 function Login() {
   return (
     <div className="h-screen w-screen bg-zinc-900">
@@ -8,37 +10,9 @@ function Login() {
           <div className="form flex-grow flex flex-col gap-6 px-20 pr-48">
             <h3 className="font-black text-5xl">Sign In</h3>
             <br />
-            <form className="flex flex-col gap-5 w-full" action="#">
-              <div className="field relative">
-                <input
-                  type="email"
-                  name="email"
-                  className="peer w-full border border-2 text-md font-bold border-zinc-700 rounded-md focus:border-teal-500 w-full pb-4 pt-6 px-5 outline-none placeholder-transparent"
-                  id="email"
-                  placeholder="Email"
-                />
-                <label
-                  htmlFor="email"
-                  className="absolute text-xs top-3 text-teal-500 opacity-1 left-5 text-teal-500 text-md font-bold transition-all duration-200 peer-placeholder-shown:text-zinc-400 peer-placeholder-shown:opacity-1 placeholder-transparent peer-placeholder-shown:top-[1.4rem] peer-placeholder-shown:left-6 peer-placeholder-shown:text-base"
-                >
-                  Email Address
-                </label>
-              </div>
-              <div className="field relative">
-                <input
-                  type="password"
-                  name="password"
-                  className="peer w-full border border-2 text-md font-bold border-zinc-700 rounded-md focus:border-teal-500 w-full pb-4 pt-6 px-5 outline-none placeholder-transparent"
-                  id="password"
-                  placeholder="Password"
-                />
-                <label
-                  htmlFor="password"
-                  className="absolute text-xs top-3 text-teal-500 opacity-1 left-5 text-teal-500 text-md font-bold transition-all duration-200 peer-placeholder-shown:text-zinc-400 peer-placeholder-shown:opacity-1 placeholder-transparent peer-placeholder-shown:top-[1.4rem] peer-placeholder-shown:left-6 peer-placeholder-shown:text-base"
-                >
-                  Password
-                </label>
-              </div>
+            <form className="flex flex-col gap-5 w-full" action="/dashboard">
+              <Input type="email" label="Email Address" />
+              <Input type="password" label="Password" />
 
               <button className="bg-teal-500 py-3 font-bold text-zinc-900 text-lg">
                 Sign In
