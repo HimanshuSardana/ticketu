@@ -1,4 +1,6 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 function Navbar() {
   return (
@@ -10,9 +12,13 @@ function Navbar() {
         </div>
 
         <div className="login">
-          <button className="text-lg font-bold text-teal-500 hover:border-0 hover:outline-none">
+          <a
+            href="/login"
+            className="hover:text-teal-500 bg-zinc-900 flex flex-row gap-3 items-center text-lg font-bold text-teal-500 hover:border-0 hover:outline-none"
+          >
             Sign In
-          </button>
+            <ArrowRight />
+          </a>
         </div>
       </div>
     </div>
